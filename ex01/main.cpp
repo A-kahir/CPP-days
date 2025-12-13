@@ -1,20 +1,33 @@
-#include <iostream>
+#include "PhoneBook.hpp"
+#include "Contact.hpp"
 
 int main(int argc, char **argv)
 {
+    (void)argv;
     if (argc != 1)
         return (1);
 
     std::cout << "Welcome to your PhoneBook\n you can use commands ADD or SEARCH or EXIT\n";
-    Contact Cont;
+    std::string cmd;
+    PhoneBook phone;
     while (1)
     {
-        std::cout << "Set A command :"
-        if (!getline(std::cin, line))
+        std::cout << "Set a command :";
+        if (!std::getline(std::cin, cmd))
             return (1);
-        if (line == "ADD")
+        if (cmd == "ADD")
         {
-            PhoneBook.set_first_name(line);
+            std::cout << "ADD=====>\n";
         }
+        else if (cmd == "SEARCH")
+        {
+            std::cout << "SEARCHH=====>\n";
+        }
+        else if (cmd == "EXIT")
+        {
+            break ;
+        }
+        else
+            std::cout << "You can use only : ADD or SEARCH or EXIT\n";
     }
 }
