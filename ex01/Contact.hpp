@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
-class Conatct
+class Contact
 {
     private:
         std::string first_name;
@@ -12,19 +13,14 @@ class Conatct
         std::string nickname;
         std::string phone_nb;
         std::string darkest_secret;
-    // public:
-        // Conatct();
-        // void set_first_name(std::string f_name);
-        // void set_last_name();
-        // void set_nickname();
-        // void set_phone_nb();
-        // void set_darkest_secret();
-
-        // void get_first_name();
-        // void get_last_name();
-        // void get_nickname();
-        // void get_phone_nb();
-        // void get_darkest_secret();
+    public:
+        Contact();
+        int set_data();
+        std::string get_first_name(void) const;
+        std::string get_last_name(void) const;
+        std::string get_nickname(void) const;
+        std::string get_phone_nb(void) const;
+        std::string get_darkest_secret(void) const;
 };
 
 #endif
