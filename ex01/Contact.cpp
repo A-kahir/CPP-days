@@ -46,6 +46,8 @@ int Contact::set_data(void)
     std::cout << "   Set your First Name: ";
     if (!std::getline(std::cin, first))
         return (1);
+    if (first.empty())
+        return (1);
     for (unsigned long i = 0; i < first.size(); i++)
     {
         if (!isprint(first[i]) || isspace(first[i]) || isdigit(first[i]) || !isalpha(first[i]))
@@ -58,6 +60,11 @@ int Contact::set_data(void)
     std::cout << "   Set your Last Name: ";
     if (!std::getline(std::cin, last))
         return (1);
+    if (last.empty())
+    {
+        std::cout << "ERROR\n";
+        return (1);
+    }
     for (unsigned long i = 0; i < last.size(); i++)
     {
         if (!isprint(last[i]) || isspace(last[i]) || isdigit(last[i]) || !isalpha(last[i]))
@@ -70,6 +77,11 @@ int Contact::set_data(void)
     std::cout << "   Set your Nickname: ";
     if (!std::getline(std::cin, nick))
         return (1);
+    if (nick.empty())
+    {
+        std::cout << "ERROR\n";
+        return (1);
+    }
     for (unsigned long i = 0; i < nick.size(); i++)
     {
         if (!isprint(nick[i]) || isspace(nick[i]) || isdigit(nick[i]) || !isalpha(nick[i]))
@@ -82,6 +94,11 @@ int Contact::set_data(void)
     std::cout << "   Set your Phone Number: ";
     if (!std::getline(std::cin, nb))
         return (1);
+    if (nb.empty())
+    {
+        std::cout << "ERROR\n";
+        return (1);
+    }
     for (unsigned long i = 0; i < nb.size(); i++)
     {
         if (!isprint(nb[i]) || isspace(nb[i]) || !isdigit(nb[i]) || nb.size() != 10)
@@ -94,6 +111,11 @@ int Contact::set_data(void)
     std::cout << "   Set your Darkest Secret: ";
     if (!std::getline(std::cin, sec))
         return (1);
+    if (sec.empty())
+    {
+        std::cout << "ERROR\n";
+        return (1);
+    }
     for (unsigned long i = 0; i < sec.size(); i++)
     {
         if (!isprint(sec[i]) || isspace(sec[i]))

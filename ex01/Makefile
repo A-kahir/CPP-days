@@ -1,6 +1,7 @@
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = phonebook
+
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
@@ -8,9 +9,9 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	$(CPP) $(CPPFLAGS) -o $@ $(OBJS)
 
-%.o: %.cpp phonebook.hpp Contact.hpp
+%.o: %.cpp Contact.hpp PhoneBook.hpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean:

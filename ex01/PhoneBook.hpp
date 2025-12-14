@@ -13,7 +13,7 @@ class PhoneBook
         int index_contact(void);
         int add_new(void);
         int search();
-        int get_index(void);
+        int get_index(void) const;
         void advan_index(void);
 };
 

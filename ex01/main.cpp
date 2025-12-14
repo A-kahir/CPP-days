@@ -16,18 +16,14 @@ int main(int argc, char **argv)
         if (!std::getline(std::cin, cmd))
             return (1);
         if (cmd == "ADD")
-        {
             Phone.add_new();
-        }
         else if (cmd == "SEARCH")
         {
             if (Phone.search() == 1)
                 return (1);
         }
         else if (cmd == "EXIT")
-        {
             break ;
-        }
         else
             std::cout << "  => You can use only : ADD or SEARCH or EXIT <=\n";
     }
