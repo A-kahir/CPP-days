@@ -1,7 +1,7 @@
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = megaphone
-SRCS = $(wildcard *.cpp)
+SRCS = megaphone.cpp
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 

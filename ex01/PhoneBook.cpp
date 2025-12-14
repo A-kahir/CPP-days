@@ -65,9 +65,7 @@ int PhoneBook::search(void)
         {
             if (contact[i].get_first_name().empty())
                 continue;
-            
-            std::cout << "|"
-            << std::setw(10) << i << "|"
+            std::cout << "|" << std::setw(10) << i << "|"
             << std::setw(10) << format_field(contact[i].get_first_name()) << "|"
             << std::setw(10) << format_field(contact[i].get_last_name()) << "|"
             << std::setw(10) << format_field(contact[i].get_nickname()) << "|\n";
