@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <string>
 
 int main(int argc, char **argv)
 {
@@ -27,7 +26,7 @@ int main(int argc, char **argv)
         {
             line.erase(pos, str1.size());
             line.insert(pos, str2);
-            pos += str2.size();
+            pos = pos + str2.size();
         }
         output_file << line << '\n';
     }

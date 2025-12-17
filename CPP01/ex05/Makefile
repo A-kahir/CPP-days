@@ -1,8 +1,9 @@
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = a.out
-SRCS = main.cpp
+SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
+
 RM = rm -f
 
 all: $(NAME)
@@ -10,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CPP) $(CPPFLAGS) -o $@ $(OBJS)
 
-%.o: %.cpp Weapon.hpp HumanA.hpp HumanB.hpp
+%.o: %.cpp Harl.hpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean:
