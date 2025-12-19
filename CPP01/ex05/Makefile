@@ -1,6 +1,6 @@
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = a.out
+NAME = harl
 SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
 
