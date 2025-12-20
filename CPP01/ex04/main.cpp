@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv)
 {
-    if (argc != 4 || !argv[1] || !argv[2] || !argv[3] || argv[4])
+    if (argc != 4)
         return (1);
     std::string file_name = argv[1];
     std::ifstream input_file(file_name.c_str());
@@ -19,9 +19,9 @@ int main(int argc, char **argv)
     std::string line;
     std::string str1 = argv[2];
     std::string str2 = argv[3];
-    size_t pos = 0;
     while (std::getline(input_file, line))
     {
+        size_t pos = 0;
         while ((pos = line.find(str1, pos)) != std::string::npos)
         {
             line.erase(pos, str1.size());
