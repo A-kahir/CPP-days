@@ -8,4 +8,5 @@ int main()
     har.complain("INFO");
     har.complain("WARNING");
     har.complain("ERROR");
+    har.complain("WANG");
 }

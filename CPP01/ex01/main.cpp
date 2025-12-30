@@ -4,8 +4,8 @@ Zombie* zombieHorde(int N, std::string name);
 
 int main()
 {
-    int N = 5;
-    if (N < 0 || N > 2147483647)
+    int N = 4;
+    if (N < 0)
         return (1);
     Zombie *zombie = zombieHorde(N, "akahir");
     if (!zombie)
